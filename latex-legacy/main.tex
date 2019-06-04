@@ -1,0 +1,56 @@
+\documentclass[english,russian,12pt]{article}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+
+\title{Введение в современную архитектуру Intel (IA-32)}
+\date{Июнь\\ 2019}
+\author{Горячий Максим Сергеевич}
+\begin{document}
+\maketitle
+
+\subsection*{Описание курса}
+В курсе будут рассмотрены современные возможности архитектуры IA-32. Слушателям необходимо {\bf до начала занятий самостоятельно изучить} следующие главы \cite{Zubkov}: 1.2, 2.1-2.4, 3.
+На третей лекции планируется рубежный контроль в форме собеседования, по результатам которого слушатели смогут продолжить посещать курс. 
+
+
+\subsection*{Содержание курса*}
+\begin{enumerate}
+  \item Обзор архитектуры IA-32/32e. Регистры и память. Регистры общего назначения, регистры x87/MMX/SSE/AVX/AVX-2/AVX-512, сегментные регистры, моделезависимые регистры (MSRs), модель памяти, адресное пространство ввода-вывода (I/O), configuration spaces.
+  \item Система команд. Команды общего назначения, команды математического сопроцессора, MMX, SSE, AVX, AVX-2, AVX-512. Команды передачи управления. Специализированные команды.
+  \item Обзор UEFI. Стадии загрузки. PEI и DXE драйверы. EDK2.
+  \item Режимы работы. Реальный режим (Real Mode). Защищённый режим (Protected Mode).  Virtual-8086. System Management Mode. IA32e (Long Mode, режим совместимости).
+  \item Поддержка многозадачности.
+  \item Защищённый режим. Уровни привилегий. Сегментные дескрипторы. Сегментные регистры (CS, SS, DS, ES, FS, GS). GDT. LDT. Плоская модель памяти. Сегментация в Long Mode.
+  \item Передача управления. Call Gates. SYSCALL. SYSENTER. Автоматическое приключение стека. TSS. Task Gates.
+  \item Прерывания и исключения. Аппаратные и программные прерывания. Приоритет прерываний. APIC. Local APIC. Поддержка многопроцессорности.
+  \item Paging. Структуры PDE, PTE. TLB. PAE. PDPE. IA-32e (PLM4E). Механизмы обеспечения безопасности: NX bit, SMAP, SMEP.
+  \item Кеш. UC/WC/WP/WT/WB типы памяти. MTRRs. PAT.
+  \item Поддержка аппаратной виртуализации (Intel-VTx). VMX Root Mode, Guest Mode. Virtual Machine Control Structure. VMLAUNCH, VMRESUME, VMEXIT. Shadow Page Tables. Extended (Nested) Page Tables. TLB Management with Virtualization.
+  \item {\it Обзор расширений для защиты данных. Intel SGX. Intel MPX.}
+  \item {\it Режим System Management Mode.}
+\end{enumerate}
+
+\subsection*{Итоговые знания}
+\begin{itemize}
+  \item Базовое понимание архитектуры x86: регистры, память, режимы работы.
+  \item Принципы работы виртуальной памяти в различных режимах работы процессора.
+  \item Базовое понимание архитектуры UEFI, навыки разработки UEFI модулей.
+  \item Что такое аппаратная визуализация и современные механизмы защиты.
+\end{itemize}
+
+\nocite{SDMVol1}
+\nocite{SDMVol2}
+\nocite{SDMVol3}
+\nocite{SDMVol4}
+\nocite{Optim}
+\nocite{Fog}
+\nocite{InstSet}
+\nocite{Pentium}
+\nocite{Guk8086}
+\nocite{GukPen3}
+
+\bibliographystyle{unsrt}
+\bibliography{program}
+
+\end{document}
