@@ -46,7 +46,7 @@ IA32e (Long Mode, режим совместимости).
 Сегментные регистры (CS, SS, DS, ES, FS, GS). GDT. LDT.
 Плоская модель памяти. 
 Сегментация в Long Mode.
-1.Передача управления. 
+1.  Передача управления.
 Call Gates.
 SYSCALL.
 SYSENTER.
@@ -68,9 +68,8 @@ Virtual Machine Control Structure.
 VMLAUNCH, VMRESUME, VMEXIT.
 Shadow Page Tables.
 Extended (Nested) Page Tables. TLB Management with Virtualization.
-
-[//]: # ( 1. Обзор расширений для защиты данных. Intel SGX. Intel MPX.)
-[//]: # ( 1. Режим System Management Mode.)
+1. Обзор расширений для защиты данных. Intel SGX. Intel MPX.
+1. Режим System Management Mode.
 
 ## Список литературы
 
