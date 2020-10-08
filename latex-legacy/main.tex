@@ -3,28 +3,28 @@
 \usepackage[utf8]{inputenc}
 \usepackage{babel}
 
-\title{Введение в современную архитектуру Intel (IA-32)}
-\date{Сентябрь\\ 2019}
+\title{Введение в современную архитектуру Intel}
+\date{Сентябрь\\ 2020}
 \author{Горячий Максим Сергеевич}
 \begin{document}
 \maketitle
 
 \subsection*{Описание курса}
-В курсе будут рассмотрены современные возможности архитектуры IA-32. Слушателям необходимо {\bf до начала занятий самостоятельно изучить} следующие главы \cite{Zubkov}: 1.2, 2.1-2.4, 3.
+В курсе будут рассмотрены современные возможности архитектуры Intel.
 
 
-\subsection*{Содержание курса*}
+\subsection*{Содержание курса}
 \begin{enumerate}
   \item Обзор архитектуры IA-32/32e. Регистры и память. Регистры общего назначения, регистры x87/MMX/SSE/AVX/AVX-2/AVX-512, сегментные регистры, моделезависимые регистры (MSRs), модель памяти, адресное пространство ввода-вывода (I/O), configuration spaces.
   \item Система команд. Команды общего назначения, команды математического сопроцессора, MMX, SSE, AVX, AVX-2, AVX-512. Команды передачи управления. Специализированные команды.
-  \item Обзор UEFI. Стадии загрузки. PEI и DXE драйверы. EDK2.
   \item Режимы работы. Реальный режим (Real Mode). Защищённый режим (Protected Mode).  Virtual-8086. System Management Mode. IA32e (Long Mode, режим совместимости).
-  \item Поддержка многозадачности.
   \item Защищённый режим. Уровни привилегий. Сегментные дескрипторы. Сегментные регистры (CS, SS, DS, ES, FS, GS). GDT. LDT. Плоская модель памяти. Сегментация в Long Mode.
+  \item Кеш. UC/WC/WP/WT/WB типы памяти. MTRRs. PAT.
+  \item Paging. Структуры PDE, PTE. TLB. PAE. PDPE. IA-32e (PLM4E). Механизмы обеспечения безопасности: NX bit, SMAP, SMEP.
+  \item Обзор UEFI. Стадии загрузки. PEI и DXE драйверы. EDK2.
+  \item Поддержка многозадачности.
   \item Передача управления. Call Gates. SYSCALL. SYSENTER. Автоматическое приключение стека. TSS. Task Gates.
   \item Прерывания и исключения. Аппаратные и программные прерывания. Приоритет прерываний. APIC. Local APIC. Поддержка многопроцессорности.
-  \item Paging. Структуры PDE, PTE. TLB. PAE. PDPE. IA-32e (PLM4E). Механизмы обеспечения безопасности: NX bit, SMAP, SMEP.
-  \item Кеш. UC/WC/WP/WT/WB типы памяти. MTRRs. PAT.
   \item Поддержка аппаратной виртуализации (Intel-VTx). VMX Root Mode, Guest Mode. Virtual Machine Control Structure. VMLAUNCH, VMRESUME, VMEXIT. Shadow Page Tables. Extended (Nested) Page Tables. TLB Management with Virtualization.
   \item {\it Обзор расширений для защиты данных. Intel SGX. Intel MPX.}
   \item {\it Режим System Management Mode.}
@@ -52,4 +52,4 @@
 \bibliographystyle{unsrt}
 \bibliography{program}
 
-\end{document}
+\end{document} 
